@@ -66,4 +66,5 @@ font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
 </style>
 <p class="alert">Please specify a zone (e.g. test.php?zone=1).</p>';
 }
+//this is a test
 ?>
