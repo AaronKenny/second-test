@@ -1,8 +1,6 @@
 <?php
-header ("Content-Type:text/xml");  
-  //<!--/* OpenX Local Mode Tag v2.8.8 */-->
-  //<!--/* OpenX Local Mode Tag v2.8.8 */-->
-  
+if(!empty($_REQUEST['zone'])){
+header ("Content-Type:text/xml");
 $zone = $_REQUEST['zone'];
 
   // The MAX_PATH below should point to the base of your OpenX installation
@@ -54,6 +52,18 @@ if(!empty($v['bannerContent'])){
 }
 $xml .= '</menu>';
 echo $xml;
-//this is a test
-//most of the time this is just me messing around
+} else  {
+echo '
+<style>
+.alert {
+padding:5px;
+border:1px dashed #c90505;
+background-color:#fdcccc;
+color:#1c1b1b;
+font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+
+}
+</style>
+<p class="alert">Please specify a zone (e.g. test.php?zone=1).</p>';
+}
 ?>
